@@ -1,0 +1,117 @@
+/* Created by Pukkawit */
+
+/* Google fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+  font-family: 'digital7'; /* Name your font family */
+  src: url('./digital-7.ttf'); /* Locate the .ttf file within your directory*/
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none; /* To prevent the user from selecting the text */
+}
+
+.dark-blue {
+  background: linear-gradient(#183d5e, #23394c);
+}
+.light-green {
+  background: linear-gradient(#c2fc7f, #7b975a);
+  color: #000;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a5b70;
+}
+
+.calculator {
+  position: relative;
+  width: 300px;
+  background-color: #fbfcfc;
+  padding: 20px 0;
+  box-shadow: 0.5px 5px rgba(0, 0, 0, 0.5), 0.5px 10px rgba(0, 0, 0, 0.35);
+}
+
+.display {
+  width: 300px;
+  height: 200px;
+  padding: 140px 20px 20px 20px;
+  text-align: right;
+  border-radius: 10px 10px 0 0;
+  background: #dee6e7;
+  outline: none;
+  border: none;
+  font-family: 'digital7', sans-serif;
+  font-size: 70px;
+  overflow: hidden;
+  color: #000;
+  box-shadow: 0.5px 2.5px 5px rgba(0, 0, 0, 0.5),
+    0.5px 5px 5px rgba(0, 0, 0, 0.35);
+  z-index: 1000;
+}
+
+.display::placeholder {
+  font-family: 'digital7', sans-serif;
+  font-size: 70px;
+}
+.buttons {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  background: #fbfcfc;
+  gap: 10px;
+  padding: 20px 15px 15px;
+}
+span {
+  width: 60px;
+  background: linear-gradient(#368ad4, #2065a3);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  /* box-shadow: rgba(50, 50, 93, 0.5) 0px 50px 100px -20px inset,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+  box-shadow: inset 0 3px 2px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.5),
+    0 15px 20px rgba(0, 0, 0, 0.35);
+  /* border: 2px solid #1a5b70; */
+}
+.backspace {
+  color: #ffd5d5;
+}
+/* span::before {
+  position: absolute;
+  content: "";
+  inset: 5px 3px;
+  border-top: 1px solid #ccc;
+  filter: blur(2px);
+} */
+span:active {
+  box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.35),
+    inset 0 5px 15px rgba(0, 0, 0, 0.25), inset 0 15px 25px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  text-shadow: 0 0 5px #4070f4, 0 0 5px#4070f4;
+}
+
+footer {
+  background-color: #2065a3;
+  padding: 15px 0;
+  font-size: 0.8rem;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+  color: #f5f5f5;
+}
